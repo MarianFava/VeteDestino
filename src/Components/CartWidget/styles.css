@@ -1,0 +1,14 @@
+.btnCarrito{
+    margin-top: 10px;
+    width: 4em;
+    height: 2.6em;
+    cursor: pointer;
+}
+.imgCarrito{
+    width: 1.5em;
+}
+.contadorCarrito{
+    border-radius: 50%;
+    background-color: rgb(189, 110, 253);
+    padding: 2px 4px;
+}

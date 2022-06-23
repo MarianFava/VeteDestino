@@ -10,10 +10,10 @@ const Header = () =>{
         <nav>
             <a href="#">Winter 22</a>
             <a href="#">Sale</a>
-            <a href="#">Contact Us </a>
+            <a href="#">Contact Us</a>
 
         </nav>
-        <img src={carrito} className="imgCarrito" alt="" />
+        {/*<img src={carrito} className="imgCarrito" alt="" />*/}
         </header>
     )
 }
