@@ -3,6 +3,10 @@
     box-shadow: 0 5px 15px rgb(77, 77, 77);
 }
 .card-img-top{
-    width: 180px;
-    height: 300px;
+    width: 286px;
+    height: 429px;
+}
+.btnDecInc{
+    display: flex;
+    justify-content: space-between;
 }

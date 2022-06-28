@@ -1,14 +1,20 @@
 import React, { useState } from "react";
 
-const ItemCount = () =>{
 
-    const [sumar, setSumar] = useState(0)
-    return (
-        <div>
-            <button onClick={()=>setSumar(sumar + 1)}>{sumar}</button>
-        </div>
-    )
+const ItemCount = ({stock}) =>{
+    const [amount, setAmount] = useState(0)
+    const count = (value) => {
+        const result = amount + value
+        if(result <=stock){
+            setAmount(amount+value)
+        }
+    }
+    return{
+        count, amount
+    }
+
 }
+
 
 
 export default ItemCount
