@@ -21,7 +21,7 @@ export const Item = ({producto}) => {
           <div className="card-body">
             <h5 className="card-title">{producto.nombre}</h5>
             <p className="card-text">{producto.descripcion}</p>
-            <button className="btn btn-primary">Comprar</button>
+            <button className="btn btn-primary">Agregar al carrito</button>
             <div className="btnDecInc">
             <button onClick={()=>count(+1)}>+</button>
             <span>{amount}</span>
