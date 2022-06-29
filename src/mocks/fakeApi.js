@@ -13,5 +13,5 @@ const productos = [
             reject("Compra cancelada")
         }
 
-    },3000)
+    },2000)
 })
