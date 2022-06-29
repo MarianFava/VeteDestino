@@ -1,16 +1,14 @@
 import React, { useState } from "react";
+import ItemCount from "../ItemCount/ItemCount";
 import "./Item.css";
 
 
 export const Item = ({producto}) => {
 
-    const [amount, setAmount] = useState(0)
-    const count = (value) => {
-    const result = amount + value
-    if(result <= producto.stock && producto.stock >=0){
-      setAmount(amount + value)
+    const onAdd = (value) => {
+      alert (`Agregando ${value} products`);
     }
-}
+
   return (
     <div className="card" style={{width: "18rem"}}>
           <img
@@ -21,15 +19,14 @@ export const Item = ({producto}) => {
           <div className="card-body">
             <h5 className="card-title">{producto.nombre}</h5>
             <p className="card-text">{producto.descripcion}</p>
-            <button className="btn btn-primary">Agregar al carrito</button>
-            <div className="btnDecInc">
-            <button onClick={()=>count(+1)}>+</button>
-            <span>{amount}</span>
-            <button onClick={()=>count(-1)}>-</button>
-            </div>
+            <button className="btn btn-primary">Ver mas detalles</button>
+            <div className="btnDecInc"></div>
+
+            <ItemCount initial={1} stock={10} onAdd={onAdd}/>
+
           </div>
-        </div>
-  )
-}
+      </div>
+  );
+};
 
 export default Item
