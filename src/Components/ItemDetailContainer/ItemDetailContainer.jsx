@@ -1,26 +1,25 @@
 import React, {useEffect, useState } from "react";
-//import { useParams } from "react-router-dom";
-import { getInfo} from "../../mocks/fakeApi";
+import { useParams } from "react-router-dom";
+import { getProd} from "../../mocks/fakeApi";
 import ItemDetail from "../ItemDetail/ItemDetail.jsx"
 
-function ItemDetailContainer (){
-
+const ItemDetailContainer = () =>{
     //llamado a fakeApi
     const [ItemProducto, setItemProducto]= useState([])
     const [loading, setLoading]= useState(true)
-    //const {detalleId} = useParams()
-    const detalleId = "101";
+    const { id } = useParams()
 
 
     useEffect(()=>{
-        getInfo
-        .then((response)=>setItemProducto(response.find(prod=> prod.id === detalleId)))
+        setLoading(true);
+        getProd(id)
+        .then((response)=>setItemProducto(response))
         .catch((error)=> console.log(error))
         .finally(()=> setLoading(false))
 
-    },[])
+    },[id])
 
-console.log(ItemProducto)
+
 return (
     <>
     {loading ? <p>Cargando...</p>: <ItemDetail ItemProducto={ItemProducto}/>}

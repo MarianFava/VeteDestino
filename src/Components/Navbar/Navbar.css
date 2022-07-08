@@ -1,20 +1,23 @@
 header{
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
+    background-color: rgb(183, 182, 181);
 }
 .imgLogo{
     width: 8%;
     margin-left: 5px;
     border-radius: 5px;
+    margin-top: 10px;
 }
 h1{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-a {
+.btnNav {
+    background-color: rgb(239, 235, 235);
     --color: #560bad;
     font-family: inherit;
     text-align: center;
+    text-decoration: none;
     display: inline-block;
     width: 8em;
     height: 2.6em;
@@ -30,7 +33,7 @@ a {
     font-weight: 500;
     color: var(--color);
    }
-   a:before {
+   .btnNav:before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -39,19 +42,19 @@ a {
     width: 200px;
     border-radius: 50%;
    }
-   a:hover {
+   .btnNav:hover {
     color: #fff;
    }
-   a:before {
+   .btnNav:before {
     top: 100%;
     left: 100%;
     transition: all .7s;
    }
-   a:hover:before {
+   .btnNav:hover:before {
     top: -30px;
     left: -30px;
    }
-   a:active:before {
+   .btnNav:active:before {
     background: #3a0ca3;
     transition: background 2s;
    }

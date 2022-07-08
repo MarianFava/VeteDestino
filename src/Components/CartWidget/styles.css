@@ -3,6 +3,7 @@
     width: 4em;
     height: 2.6em;
     cursor: pointer;
+    border-radius: 8px;
 }
 .imgCarrito{
     width: 1.5em;
