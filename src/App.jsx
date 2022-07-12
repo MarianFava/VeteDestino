@@ -12,13 +12,13 @@ const App = () =>{
   return(
     <BrowserRouter>
     <Navbar/>
-    <Footer/>
     <Routes>
      <Route path="/" element={<ItemListContainer greeting="Bienvenidos a Vete Destino Indumentaria"/>}/>
      <Route path="/category/:categoryId" element={<ItemListContainer greeting="Bienvenidos a Vete Destino Indumentaria"/>}/>
      <Route path="/product/:productId" element={<ItemDetailContainer/>}/>
      <Route path="/cart" element={<Cart/>}/>
     </Routes>
+    <Footer/>
     </BrowserRouter>
   )
 }

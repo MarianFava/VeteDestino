@@ -1,7 +1,7 @@
 import React, { useEffect,useState } from "react";
 import "./styles.css";
 import ItemList from "../ItemList/ItemList";
-import { getInfo } from "../../mocks/fakeApi";
+import { getProdsPorCategoria } from "../../mocks/fakeApi";
 import { useParams } from "react-router-dom";
 
 
@@ -13,7 +13,7 @@ const ItemListContainer = ({ greeting }) => {
 
     useEffect(()=>{
         setLoading(true);
-        getInfo
+        getProdsPorCategoria(categoryId)
         .then((response)=>setListaProductos(response))
         .catch((error)=> console.log(error))
         .finally(()=> setLoading(false))
@@ -25,7 +25,7 @@ const ItemListContainer = ({ greeting }) => {
         <div className="landing">
             <span className="landingGreeting">{greeting}</span>
         </div>
-        {loading ? <p>Cargando...</p>: <ItemList listaProductos={listaProductos}/>}
+        {loading ? <p>Cargando...</p>: <ItemList listaProductos={listaProductos} categoryId={categoryId}/>}
         </>
     )
 }

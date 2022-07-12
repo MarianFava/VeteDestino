@@ -2,11 +2,12 @@ import React from "react";
 import Item from "../Item/Item";
 import "./ItemList.css";
 
-const ItemList =({listaProductos}) =>{
+
+const ItemList =({listaProductos , categoryId}) =>{
 
     return (
         <div>
-            <h3>Winter 22</h3>
+            <h3>{categoryId}</h3>
             <div className="cardsContainer">
             {listaProductos.map((producto)=><Item key={producto.id} producto={producto}/>)}
             </div>

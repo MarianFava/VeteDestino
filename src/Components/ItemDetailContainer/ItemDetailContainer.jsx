@@ -7,17 +7,18 @@ const ItemDetailContainer = () =>{
     //llamado a fakeApi
     const [ItemProducto, setItemProducto]= useState([])
     const [loading, setLoading]= useState(true)
-    const { id } = useParams()
-
+    const { productId } = useParams();
 
     useEffect(()=>{
         setLoading(true);
-        getProd(id)
-        .then((response)=>setItemProducto(response))
+        getProd(productId)
+        .then((response)=>{
+            setItemProducto(response);
+        })
         .catch((error)=> console.log(error))
         .finally(()=> setLoading(false))
 
-    },[id])
+    },[productId])
 
 
 return (

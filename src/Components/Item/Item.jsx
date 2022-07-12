@@ -20,10 +20,7 @@ export const Item = ({producto}) => {
           <div className="card-body">
             <h5 className="card-title">{producto.nombre}</h5>
             <p className="card-text">{producto.descripcion}</p>
-            <Link to={`/detail/${producto.id}`} className="btn btnNav">Ver detalles</Link>
-            <div className="btnDecInc"></div>
-
-            <ItemCount initial={1} stock={10} onAdd={onAdd}/>
+            <Link to={`/product/${producto.id}`} className="btn btnNav">Ver detalles</Link>
 
           </div>
       </div>
