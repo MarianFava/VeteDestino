@@ -1,9 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import "./ItemDetail.css";
 import ItemCount from "../ItemCount/ItemCount";
+import { Link } from "react-router-dom";
 
 
 const ItemDetail = ({ItemProducto}) => {
+  const [goToCart, setGoToCart] = useState(false);
+
+
+  const onAdd = (value) => {
+    setGoToCart(true);
+  }
+
   return (
     <div className="container">
     <div className="card-container">
@@ -15,7 +23,11 @@ const ItemDetail = ({ItemProducto}) => {
       <div className="description">
         <p>{ItemProducto.descripcion}</p>
         <h4>{ItemProducto.talles}</h4>
-        <ItemCount stock={ItemProducto.stock} initial={1} />
+        {
+        goToCart
+        ? <Link to="/cart" className="btnNav">Finalizar Compra</Link>
+        : <ItemCount stock={ItemProducto.stock} initial={1} onAdd={onAdd}/>
+        }
       </div>
     </div>
 
