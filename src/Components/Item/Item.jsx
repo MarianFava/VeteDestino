@@ -1,14 +1,9 @@
-import React, { useState } from "react";
-import ItemCount from "../ItemCount/ItemCount";
+import React from "react";
 import "./Item.css";
 import { Link } from "react-router-dom";
 
 
 export const Item = ({producto}) => {
-
-    const onAdd = (value) => {
-      alert (`Agregando ${value} products`);
-    }
 
   return (
     <div className="card" style={{width: "18rem"}}>
