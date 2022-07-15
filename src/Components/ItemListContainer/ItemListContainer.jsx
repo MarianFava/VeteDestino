@@ -3,6 +3,8 @@ import "./styles.css";
 import ItemList from "../ItemList/ItemList";
 import { getProdsPorCategoria } from "../../mocks/fakeApi";
 import { useParams } from "react-router-dom";
+import { db } from "../../firebase/firebase";
+import { getDocs, collection, query} from "firebase/firestore"
 
 
 const ItemListContainer = ({ greeting }) => {
@@ -11,7 +13,10 @@ const ItemListContainer = ({ greeting }) => {
 
     const {categoryId}= useParams();
 
+
     useEffect(()=>{
+
+
         setLoading(true);
         getProdsPorCategoria(categoryId)
         .then((response)=>setListaProductos(response))
