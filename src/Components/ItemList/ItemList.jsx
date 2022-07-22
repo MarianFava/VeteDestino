@@ -4,7 +4,7 @@ import "./ItemList.css";
 
 
 const ItemList =({listaProductos , categoryId}) =>{
-
+    console.log(listaProductos);
     return (
         <div>
             <h3>{categoryId}</h3>

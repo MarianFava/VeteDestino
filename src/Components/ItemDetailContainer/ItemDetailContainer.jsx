@@ -1,7 +1,9 @@
 import React, {useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { getProd} from "../../mocks/fakeApi";
 import ItemDetail from "../ItemDetail/ItemDetail.jsx"
+import { useParams } from "react-router-dom";
+import { db } from "../../firebase/firebase";
+import { doc,  getDoc, collection} from "firebase/firestore";
+
 
 const ItemDetailContainer = () =>{
     //llamado a fakeApi
@@ -10,16 +12,15 @@ const ItemDetailContainer = () =>{
     const { productId } = useParams();
 
     useEffect(()=>{
-        setLoading(true);
-        getProd(productId)
-        .then((response)=>{
-            setItemProducto(response);
-        })
-        .catch((error)=> console.log(error))
+       const productsCollection = collection(db, "ItemCollection");
+       const refDoc= doc(productsCollection, productId)
+       getDoc(refDoc).then(result => {
+          setItemProducto(result.data())
+       })
+       .catch((error)=> console.log(error))
         .finally(()=> setLoading(false))
 
-    },[productId])
-
+    }, [productId]);
 
 return (
     <>
@@ -28,4 +29,4 @@ return (
 )
 }
 
-export default ItemDetailContainer
+export default ItemDetailContainer;

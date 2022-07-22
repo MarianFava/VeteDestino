@@ -14,7 +14,7 @@ const ItemDetail = ({ItemProducto}) => {
     setGoToCart(true);
     addProduct(ItemProducto, quantity);
   }
-
+  
   return (
     <div className="container">
     <div className="card-container">
