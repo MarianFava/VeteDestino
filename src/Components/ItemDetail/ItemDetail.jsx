@@ -21,7 +21,7 @@ const ItemDetail = ({ItemProducto}) => {
       <div className="header">
         <img className="imgCard" src={ItemProducto.img} alt={ItemProducto.nombre}></img>
         <h2>{ItemProducto.nombre}</h2>
-        <h3>{ItemProducto.precio}</h3>
+        <h3>$ {ItemProducto.precio}</h3>
       </div>
       <div className="description">
         <p>{ItemProducto.descripcion}</p>
