@@ -1,7 +1,6 @@
 {
   "name": "react-vetedestino-fava",
   "version": "0.1.0",
-  "homepage": "https://marianfava.github.io/VeteDestino/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.3",
