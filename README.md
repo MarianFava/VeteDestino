@@ -34,8 +34,10 @@ Para correr correctamente este proyecto se debe:
 ### Comprando en la app
 
 /Dentro de la app podrás recorrer el catálogo a travás del Navbar y elegir las diferentes categorías
-/Clickeando el botón **ver detalles de cualquier producto , desplegas la descripción del mismo y un contador para agregar unidades al carrito.
-/Clickeando el carrito podés ver lo que tenes acumulado y si lo deseas , quitar productos del mismo.
+/Clickeando el botón **ver detalles** de cualquier producto , desplegás la descripción del mismo y un contador para agregar unidades al carrito.
+/Clickeando el carrito podés ver lo que tenés acumulado y si lo deseas, quitar productos del mismo.
+/Una vez que finalizás la compra deberás llenar un formulario con tus datos de contacto.
+
 
 
 
