@@ -39,7 +39,12 @@ const ItemListContainer = ({ greeting }) => {
         <div className="landing">
             <span className="landingGreeting">{greeting}</span>
         </div>
-        {loading ? <p>Cargando...</p>: <ItemList listaProductos={listaProductos} categoryId={categoryId}/>}
+        <div >
+            <p className="presentacion">Somos Vete Destino, una empresa de fabricación y venta de indumentaria femenina.</p>
+            <p className="presentacion">Hacemos ventas por mayor y menor.</p>
+            <p className="presentacion">Envíos a todo el país.</p>
+        </div>
+        {loading ? <p className="loading"></p>: <ItemList listaProductos={listaProductos} categoryId={categoryId}/>}
         </>
     )
 }

@@ -15,7 +15,8 @@ const ItemDetailContainer = () =>{
        const productsCollection = collection(db, "ItemCollection");
        const refDoc= doc(productsCollection, productId)
        getDoc(refDoc).then(result => {
-          setItemProducto(result.data())
+        const producto = {id:productId,...result.data()}
+          setItemProducto(producto)
        })
        .catch((error)=> console.log(error))
         .finally(()=> setLoading(false))

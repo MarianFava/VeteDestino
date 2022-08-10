@@ -1,0 +1,11 @@
+.btnLogin{
+    margin-top: 10px;
+    width: 4em;
+    height: 2.6em;
+    cursor: pointer;
+    border-radius: 8px;
+    border-color:#560bad ;
+}
+.imgLogin{
+    width: 1.5em;
+}

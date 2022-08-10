@@ -1,9 +1,11 @@
 .btnCarrito{
     margin-top: 10px;
+    margin-right: 8px;
     width: 4em;
     height: 2.6em;
     cursor: pointer;
     border-radius: 8px;
+    border-color:#560bad ;
 }
 .imgCarrito{
     width: 1.5em;
